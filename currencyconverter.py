@@ -3,7 +3,8 @@
 # and open the template in the editor.
 import sys
 def calc(a,b,c):
-    no=a.replace(a,"please")+" "+b.replace(b,"enter")+" "+c.replace(c,"won, rupee or dollar")
+    nb=a.replace(a,"please")+" "+b.replace(b,"enter")+" "+c.replace(c,"won, rupees or dollars in (2)")
+    nc=a.replace(a,"please")+" "+b.replace(b,"enter")+" "+c.replace(c,"won, rupee or dollar in (3)")
     if b=="won":
         wdol=float(a)/1126.9
         wrup=float(a)/16.9
@@ -12,7 +13,7 @@ def calc(a,b,c):
         elif c=="dollar":
             print(a.replace(a,str(wdol))+" "+b.replace(b,"dollars")+" "+c.replace(c," "))
         else:
-            print(no)
+            print(nc)
     elif b=="rupees":
         rdol=float(a)/68.1
         rwon=float(a)*16.9
@@ -21,7 +22,7 @@ def calc(a,b,c):
         elif c=="won":
             print(a.replace(a,str(rwon))+" "+b.replace(b,"won")+" "+c.replace(c," "))
         else:
-            print(no)
+            print(nc)
     elif b=="dollars":
         drup=float(a)*68.1
         dwon=float(a)*1126.9
@@ -30,9 +31,9 @@ def calc(a,b,c):
         elif c=="won":
             print(a.replace(a,str(dwon))+" "+b.replace(b,"won")+" "+c.replace(c," "))
         else:
-            print(no)
+            print(nc)
     else:
-        print(no)
+        print(nb)
             
             
 if __name__ == "__main__":
